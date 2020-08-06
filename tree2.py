@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Nov 21 14:34:07 2017
+
+@author: sam0225
+"""
+
+
+from mcpi.minecraft import Minecraft
+
+mc = Minecraft.create()
+
+def plantTree(x,y,z):
+    mc.setBlocks(x-1,y+3,z-1,x+1,y+5,z+1,20)
+    mc.setBlocks(x,y,z,x,y+4,z,30)
+
+x,y,z=mc.player.getTilePos()
+
+for i in range(20):
+    plantTree(x+i*5,y,z)
+
+
+  
+
+
+
+
+       
+
+
